@@ -1,5 +1,11 @@
 # AgentKit Changelog
 
+## 0.10.18
+
+### Patch Changes
+
+- Added Circle Arc mainnet (`5042`, `arc-mainnet`) and Arc Testnet (`5042002`, `arc-testnet`) to `CHAIN_ID_TO_NETWORK_ID`, `NETWORK_ID_TO_VIEM_CHAIN`, and `getChain`. Privy EVM wallet configure no longer throws `Chain with ID 5042 not found`.
+
 ## 0.10.17
 
 ### Patch Changes

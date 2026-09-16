@@ -2,7 +2,7 @@
   "name": "@thirdfy/agentkit",
   "description": "Thirdfy AgentKit core primitives (forked from Coinbase)",
   "repository": "https://github.com/thirdfy/agentkit",
-  "version": "0.10.17",
+  "version": "0.10.18",
   "author": "Coinbase Inc.",
   "license": "Apache-2.0",
   "main": "dist/index.js",

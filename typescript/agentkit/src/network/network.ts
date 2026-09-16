@@ -30,6 +30,8 @@ export const CHAIN_ID_TO_NETWORK_ID: Record<number, string> = {
   11155420: "optimism-sepolia",
   6281971: "dogeos-testnet",
   4663: "robinhood-mainnet",
+  5042: "arc-mainnet",
+  5042002: "arc-testnet",
 };
 
 const dogeosTestnet = defineChain({
@@ -80,6 +82,54 @@ const robinhoodMainnet = defineChain({
   },
 });
 
+const arcMainnet = defineChain({
+  id: 5042,
+  name: "Arc",
+  nativeCurrency: {
+    name: "USDC",
+    symbol: "USDC",
+    decimals: 18,
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://rpc.mainnet.arc.io"],
+    },
+    public: {
+      http: ["https://rpc.mainnet.arc.io"],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: "Arc Explorer",
+      url: "https://explorer.arc.io",
+    },
+  },
+});
+
+const arcTestnet = defineChain({
+  id: 5042002,
+  name: "Arc Testnet",
+  nativeCurrency: {
+    name: "USDC",
+    symbol: "USDC",
+    decimals: 18,
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://rpc.testnet.arc.io"],
+    },
+    public: {
+      http: ["https://rpc.testnet.arc.io"],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: "Arc Testnet Explorer",
+      url: "https://testnet.arcscan.app",
+    },
+  },
+});
+
 /**
  * Maps Coinbase network IDs to EVM chain IDs
  */
@@ -109,6 +159,8 @@ export const NETWORK_ID_TO_VIEM_CHAIN: Record<string, Chain> = {
   "optimism-sepolia": optimismSepolia,
   "dogeos-testnet": dogeosTestnet,
   "robinhood-mainnet": robinhoodMainnet,
+  "arc-mainnet": arcMainnet,
+  "arc-testnet": arcTestnet,
 };
 
 /**
